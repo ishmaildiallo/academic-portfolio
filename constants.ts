@@ -149,7 +149,7 @@ export const PUBLICATIONS: Publication[] = [
     title: "The evolving cardiovascular burden in Sierra Leone: a 33-year analysis of the Global Burden of Disease study 2023",
     authors: ["Jalloh MB", "et al"],
     venue: "Nutrition, Metabolism and Cardiovascular Diseases",
-    year: 2025,
+    year: 2026,
     url: "https://www.sciencedirect.com/science/article/abs/pii/S0939475326000748?via%3Dihub",
     category: "Peer-reviewed Manuscripts"
   },

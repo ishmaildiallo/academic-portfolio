@@ -34,15 +34,7 @@ export const Publications: React.FC = () => {
   return (
     <div className="space-y-14 animate-fade-in">
       <div>
-        <h1 className="text-3xl md:text-4xl font-bold mb-6 text-brand-dark">Publications</h1>
-
-        {/* Stats bar */}
-        <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-brand-muted mb-10 pb-6 border-b border-brand-border">
-          <span><span className="text-brand-dark font-bold text-base">{peerReviewed.length}</span> Peer-Reviewed</span>
-          <span><span className="text-brand-dark font-bold text-base">{preprints.length}</span> Preprints</span>
-          <span><span className="text-brand-dark font-bold text-base">{abstracts.length}</span> Abstracts</span>
-          <span><span className="text-brand-dark font-bold text-base">{opinionItems.length}</span> Opinion Pieces</span>
-        </div>
+        <h1 className="text-3xl md:text-4xl font-bold mb-10 text-brand-dark">Publications</h1>
 
         <div className="space-y-14">
           <section>
