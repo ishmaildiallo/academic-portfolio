@@ -58,7 +58,7 @@ export const BLOG_POSTS: BlogPost[] = [
     imageUrl: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=800",
     tags: ["Reflection", "Palliative Care", "Patient Communication"],
     content: `
-      <p class="italic text-xl text-white mb-8">The truth hurts, but silence kills.</p>
+      <p class="italic text-xl text-brand-dark mb-8">The truth hurts, but silence kills.</p>
       
       <p>These words echoed in my mind as I stood outside the hospital room, bracing myself for what would be one of the most challenging conversations of my medical career.</p>
       
@@ -95,7 +95,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <p>The next time you find yourself struggling to convey a difficult message, remember: good communication in medicine can sometimes be a challenge, but it's a challenge worth embracing. For in those moments of connection, we don't just practice medicine – we practice what it means to be human.</p>
       
       <hr />
-      <p class="text-sm text-gray-500 italic">¹Sarah is a pseudonym used to protect patient privacy.</p>
+      <p class="text-sm text-brand-muted italic">¹Sarah is a pseudonym used to protect patient privacy.</p>
     `
   },
   {

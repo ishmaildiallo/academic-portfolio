@@ -14,10 +14,10 @@ const AppContent: React.FC = () => {
   useDocumentTitle();
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-brand-blue selection:text-black text-lg md:text-xl leading-loose">
-      <div className="max-w-4xl mx-auto px-6 flex flex-col min-h-screen">
+    <div className="min-h-screen bg-brand-bg text-brand-text selection:bg-brand-blue selection:text-white text-base leading-relaxed">
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-1 w-full py-12">
+        <main className="flex-1 w-full py-10 md:py-14">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/publications" element={<Publications />} />
@@ -30,13 +30,13 @@ const AppContent: React.FC = () => {
           </Routes>
         </main>
 
-        <footer className="py-16 mt-12 text-center sm:text-left border-t border-white/10">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-6 text-base text-brand-gray">
+        <footer className="py-12 mt-16 text-center sm:text-left border-t border-brand-border">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-brand-muted">
             <span>&copy; {new Date().getFullYear()} Mohamed Bella Jalloh</span>
-            <div className="flex gap-8">
-               <a href="mailto:mbjay208@outlook.com" className="hover:text-brand-blue transition-colors">Email</a>
-               <a href="https://twitter.com/dr_bellajaymd" target="_blank" rel="noreferrer" className="hover:text-brand-blue transition-colors">Twitter</a>
-               <a href="https://www.linkedin.com/in/bellajaymd" target="_blank" rel="noreferrer" className="hover:text-brand-blue transition-colors">LinkedIn</a>
+            <div className="flex gap-6">
+               <a href="mailto:mbjay208@outlook.com" className="hover:text-brand-dark transition-colors duration-300">Email</a>
+               <a href="https://twitter.com/dr_bellajaymd" target="_blank" rel="noreferrer" className="hover:text-brand-dark transition-colors duration-300">Twitter</a>
+               <a href="https://www.linkedin.com/in/bellajaymd" target="_blank" rel="noreferrer" className="hover:text-brand-dark transition-colors duration-300">LinkedIn</a>
             </div>
           </div>
         </footer>

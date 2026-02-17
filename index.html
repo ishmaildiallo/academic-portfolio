@@ -33,29 +33,36 @@
 
       body {
         font-family: Georgia, 'Times New Roman', Times, serif;
-        background: #000000;
-        color: #ffffff;
+        background: #FAFAF8;
+        color: #1a1a1a;
         -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         overflow-x: hidden;
       }
-      
+
       .animate-fade-in {
-        animation: fadeIn 1.2s ease-out forwards;
+        animation: fadeIn 0.8s ease-out forwards;
       }
-      
+
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
+        from { opacity: 0; transform: translateY(8px); }
         to { opacity: 1; transform: translateY(0); }
       }
 
       /* Minimal scrollbar */
       ::-webkit-scrollbar {
-        width: 8px;
-        background: #000000;
+        width: 6px;
+        background: #FAFAF8;
       }
       ::-webkit-scrollbar-thumb {
-        background: #333333;
-        border-radius: 4px;
+        background: #d1d1d1;
+        border-radius: 3px;
+      }
+
+      /* Selection */
+      ::selection {
+        background: #2563EB;
+        color: #ffffff;
       }
     </style>
     <script>
@@ -70,32 +77,35 @@
             },
             colors: {
               brand: {
-                black: '#000000',
-                dark: '#111111',
+                bg: '#FAFAF8',
+                card: '#F3F2EF',
                 white: '#ffffff',
-                gray: '#999999',
-                blue: '#60a5fa' // Lighter blue for dark mode readability
+                dark: '#1a1a1a',
+                text: '#2d2d2d',
+                muted: '#6B6B6B',
+                border: '#e5e3df',
+                blue: '#2563EB'
               }
             },
             typography: (theme) => ({
               DEFAULT: {
                 css: {
-                  color: theme('colors.white'),
-                  fontSize: '1.25rem', // 20px base for prose
-                  lineHeight: '2',
+                  color: theme('colors.brand.text'),
+                  fontSize: '1rem',
+                  lineHeight: '1.85',
                   a: {
                     color: theme('colors.brand.blue'),
                     '&:hover': {
-                      color: theme('colors.blue.400'),
+                      color: theme('colors.blue.700'),
                     },
                   },
-                  h1: { fontFamily: 'Georgia, serif' },
-                  h2: { fontFamily: 'Georgia, serif' },
-                  h3: { fontFamily: 'Georgia, serif' },
+                  h1: { fontFamily: 'Georgia, serif', color: theme('colors.brand.dark') },
+                  h2: { fontFamily: 'Georgia, serif', color: theme('colors.brand.dark') },
+                  h3: { fontFamily: 'Georgia, serif', color: theme('colors.brand.dark') },
                   blockquote: {
-                    borderLeftColor: theme('colors.gray.700'),
+                    borderLeftColor: theme('colors.gray.300'),
                     fontStyle: 'italic',
-                    color: theme('colors.gray.400'),
+                    color: theme('colors.gray.600'),
                   },
                 },
               },
@@ -104,21 +114,7 @@
         }
       }
     </script>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
-    "vite": "https://esm.sh/vite@^7.3.1",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
