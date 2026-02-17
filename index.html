@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Bella Jalloh — Physician & Cardiovascular Researcher</title>
+    <meta name="description" content="Academic portfolio of Mohamed Bella Jalloh — physician, cardiovascular researcher, and global health professional. Publications in JACC, European Heart Journal, BMJ Global Health, and more." />
+    <meta name="author" content="Mohamed Bella Jalloh" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mohamed Bella Jalloh — Physician & Cardiovascular Researcher" />
+    <meta property="og:description" content="Academic portfolio of Mohamed Bella Jalloh — physician, cardiovascular researcher, and global health professional." />
+    <meta property="og:image" content="/profile.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@dr_bellajaymd" />
+    <meta name="twitter:title" content="Mohamed Bella Jalloh — Physician & Researcher" />
+    <meta name="twitter:description" content="Academic portfolio — cardiovascular research, clinical trials, and global health." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: 'Chomsky';
+        src: url('https://cdn.jsdelivr.net/gh/idreesinc/Chomsky@master/Chomsky.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background: #000000;
+        color: #ffffff;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      
+      .animate-fade-in {
+        animation: fadeIn 1.2s ease-out forwards;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* Minimal scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: #000000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333333;
+        border-radius: 4px;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+              serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+              body: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+              masthead: ['"Engravers Old English BT"', 'Chomsky', '"UnifrakturMaguntia"', 'cursive'],
+            },
+            colors: {
+              brand: {
+                black: '#000000',
+                dark: '#111111',
+                white: '#ffffff',
+                gray: '#999999',
+                blue: '#60a5fa' // Lighter blue for dark mode readability
+              }
+            },
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  color: theme('colors.white'),
+                  fontSize: '1.25rem', // 20px base for prose
+                  lineHeight: '2',
+                  a: {
+                    color: theme('colors.brand.blue'),
+                    '&:hover': {
+                      color: theme('colors.blue.400'),
+                    },
+                  },
+                  h1: { fontFamily: 'Georgia, serif' },
+                  h2: { fontFamily: 'Georgia, serif' },
+                  h3: { fontFamily: 'Georgia, serif' },
+                  blockquote: {
+                    borderLeftColor: theme('colors.gray.700'),
+                    fontStyle: 'italic',
+                    color: theme('colors.gray.400'),
+                  },
+                },
+              },
+            }),
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
