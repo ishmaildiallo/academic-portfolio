@@ -5,7 +5,7 @@ import { ArrowUpRight } from 'lucide-react';
 export const Contact: React.FC = () => {
   return (
     <div className="space-y-10 animate-fade-in max-w-3xl">
-      <h1 className="text-3xl md:text-4xl font-bold text-brand-dark">Contact</h1>
+      <h1 className="text-3xl md:text-4xl font-bold text-brand-dark font-serif">Contact</h1>
 
       <div className="text-brand-muted font-body leading-relaxed max-w-none space-y-6 text-[0.95rem] md:text-base">
         <p>

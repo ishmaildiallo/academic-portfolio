@@ -34,7 +34,7 @@ export const Publications: React.FC = () => {
   return (
     <div className="space-y-14 animate-fade-in">
       <div>
-        <h1 className="text-3xl md:text-4xl font-bold mb-10 text-brand-dark">Publications</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-10 text-brand-dark font-serif">Publications</h1>
 
         <div className="space-y-14">
           <section>

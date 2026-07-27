@@ -1,20 +1,31 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Mohamed Bella Jalloh — Academic Portfolio
 
-# Run and deploy your AI Studio app
+Personal academic website: research, publications, teaching, and writing.
 
-This contains everything you need to run your app locally.
+Built with React 18, TypeScript, Vite, Tailwind CSS, and react-router. Body and
+heading text use the system Georgia serif stack; the masthead blackletter is a
+locally subset, self-hosted font. Deployed on Vercel.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1MkPvHf92F5zzIbyZqiagOOCvjPwwZ54W
+## Develop
 
-## Run Locally
+```
+npm install
+npm run dev
+```
 
-**Prerequisites:**  Node.js
+## Build & preview
 
+```
+npm run build
+npm run preview
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Deploys are static: `vite build` outputs to `dist/`, which Vercel serves with
+the SPA rewrite and cache headers configured in `vercel.json`.
+
+## Content
+
+Page content lives in `data/*.ts` (publications, blog posts, research projects,
+teaching, personal info), re-exported through `constants.ts`. Blog posts support
+embedded HTML; Tailwind scans `data/` too, so classes used inside post HTML are
+included in the build.

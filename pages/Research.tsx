@@ -5,7 +5,7 @@ export const Research: React.FC = () => {
   return (
     <div className="space-y-14 animate-fade-in">
       <header className="max-w-3xl">
-        <h1 className="text-3xl md:text-4xl font-bold mb-5 text-brand-dark">Research</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-5 text-brand-dark font-serif">Research</h1>
         <p className="text-base md:text-[1.05rem] text-brand-muted font-body leading-relaxed">
           My work investigates the intersection of cardiovascular health and systemic inequities, designing resilient healthcare delivery models for resource-limited settings.
         </p>
@@ -23,6 +23,8 @@ export const Research: React.FC = () => {
                 <img
                   src={project.imageUrl}
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>

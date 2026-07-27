@@ -4,7 +4,7 @@ import { TEACHING_COURSES } from '../constants';
 export const Teaching: React.FC = () => {
   return (
     <div className="space-y-10 animate-fade-in">
-      <h1 className="text-3xl md:text-4xl font-bold text-brand-dark">Teaching & Mentorship</h1>
+      <h1 className="text-3xl md:text-4xl font-bold text-brand-dark font-serif">Teaching & Mentorship</h1>
 
       <div className="grid gap-6">
         {TEACHING_COURSES.map((course) => (

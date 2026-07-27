@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { BLOG_POSTS } from '../constants';
 import { ArrowLeft } from 'lucide-react';
@@ -6,6 +6,12 @@ import { ArrowLeft } from 'lucide-react';
 export const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = BLOG_POSTS.find(p => p.slug === slug && p.type === 'internal');
+
+  useEffect(() => {
+    if (post) {
+      document.title = `${post.title} — MB Jalloh`;
+    }
+  }, [post]);
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -19,11 +25,11 @@ export const BlogPost: React.FC = () => {
 
       <article>
         <header className="mb-10">
-           <h1 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4 leading-tight">
+           <h1 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4 leading-tight font-serif">
              {post.title}
            </h1>
            <div className="flex flex-wrap items-center gap-4">
-             <span className="text-base text-brand-muted font-serif">
+             <span className="text-base text-brand-muted">
                {post.date}
              </span>
              {post.tags && post.tags.length > 0 && (
@@ -38,14 +44,14 @@ export const BlogPost: React.FC = () => {
            </div>
            {post.imageUrl && (
              <div className="w-full aspect-[21/9] overflow-hidden mt-8 mb-8 border border-brand-border rounded-sm">
-               <img src={post.imageUrl} alt={post.title} className="w-full h-full object-cover" />
+               <img src={post.imageUrl} alt={post.title} decoding="async" fetchpriority="high" className="w-full h-full object-cover" />
              </div>
            )}
         </header>
 
         <div
           className="prose prose-lg max-w-none
-          prose-p:font-serif prose-p:leading-[1.9] prose-p:text-brand-text prose-p:my-7 prose-p:text-[0.95rem] md:prose-p:text-base
+          prose-p:leading-[1.8] prose-p:text-brand-text prose-p:my-7 prose-p:text-[0.95rem] md:prose-p:text-base
           prose-headings:font-serif prose-headings:font-bold prose-headings:text-brand-dark
           prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:font-bold
           prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-5 prose-h3:font-bold

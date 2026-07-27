@@ -15,11 +15,10 @@ export function useDocumentTitle() {
 
   useEffect(() => {
     const path = location.pathname;
-    // Check for blog post routes
+    // Individual blog posts set their own title from the post data.
     if (path.startsWith('/blog/')) {
-      document.title = 'Blog — MB Jalloh';
-    } else {
-      document.title = TITLE_MAP[path] || 'Mohamed Bella Jalloh';
+      return;
     }
+    document.title = TITLE_MAP[path] || 'Mohamed Bella Jalloh';
   }, [location.pathname]);
 }

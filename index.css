@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Masthead blackletter font, subset to latin glyphs and self-hosted.
+   (The body/heading faces are system Georgia — no webfont needed.) */
+@font-face {
+  font-family: 'UnifrakturMaguntia';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/unifraktur-subset.v1.woff') format('woff');
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: #FAFAF8;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  background: #FAFAF8;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d1d1;
+  border-radius: 3px;
+}
+
+/* Selection */
+::selection {
+  background: #2563EB;
+  color: #ffffff;
+}

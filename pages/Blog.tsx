@@ -10,7 +10,7 @@ export const Blog: React.FC = () => {
 
   return (
     <div className="space-y-10 animate-fade-in">
-      <h1 className="text-3xl md:text-4xl font-bold text-brand-dark">Writing</h1>
+      <h1 className="text-3xl md:text-4xl font-bold text-brand-dark font-serif">Writing</h1>
 
       <div className="grid gap-6">
         {allPosts.map((post) => {
